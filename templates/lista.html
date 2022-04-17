@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for pesquisa in pesquisas %}
+    <tr>
+      <td><a href="/detalhes?name={{ pesquisa.Geral.Titulo }}" style="color:black;" >{{ pesquisa.Geral.Titulo }}</a></td>
+      <td><a href="/editar?name={{ pesquisa.Geral.Titulo }}" class="btn btn-primary">Editar</a></td>
+      <td><a href="/delete?name={{ pesquisa.Geral.Titulo }}" class="btn btn-danger">Apagar</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% include 'footer.html' %}

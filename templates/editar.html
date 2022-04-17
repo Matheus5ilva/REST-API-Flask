@@ -1,0 +1,90 @@
+{% include 'header.html' %}
+    <div class="container">
+        <h2>Editar a pesquisa - {{ pesquisa.Geral.Titulo }}</h2>
+        <pre>
+            <form action="/edit" method="POST">
+            {
+                "Geral": {
+                    "Id": <input type="text" name="idWiki" value="{{ pesquisa.Geral.Id }}">,
+                    "Titulo": <input type="text" name="tituloWiki" value="{{ pesquisa.Geral.Titulo }}"> ,
+                    "Linguagem": <input type="text" name="linguagemWiki" value="{{ pesquisa.Geral.Linguagem }}">  ,
+                    "Descricao":<textarea name="descricaoWiki" rows="3" cols="33">{{ pesquisa.Geral.Descricao }}</textarea>,
+                    "Palavras_chave": <input type="text" name="palavraChaveWiki" value="{{ pesquisa.Geral.Palavra_chave }}"> ,
+                    "Cobertura": <input type="text" name="coberturaWiki" value="{{ pesquisa.Geral.Cobertura }}"> ,
+                    "Estrutura": <input type="text" name="estruturaWiki" value="{{ pesquisa.Geral.Estrutura }}"> ,
+                    "Nivel_de_agregacao": <input type="text" name="nivelDeAgregacaoWiki" value="{{ pesquisa.Geral.Nivel_de_agregacao }}">
+                },
+                "Ciclo_de_vida": {
+                    "Versao": <input type="text" name="versaoWiki" value="{{ pesquisa.Ciclo_de_vida.Versao }}"> ,
+                    "Status": <input type="text" name="statusWiki" value="{{ pesquisa.Ciclo_de_vida.Status }}">,
+                    "Contribuinte": {
+                        "Entidade": <input type="text" name="entidadeWiki" value="{{ pesquisa.Ciclo_de_vida.Contribuinte.Entidade }}">,
+                        "Data": <input type="text" name="dateWiki" value="{{ pesquisa.Ciclo_de_vida.Contribuinte.Data }}">,
+                        "Papel": <input type="text" name="papelWiki" value="{{ pesquisa.Ciclo_de_vida.Contribuinte.Papel }}">,
+                    }
+                },
+                "Meta_Metadados": {
+                    "Identificador": {
+                        "Catalogo": <input type="text" name="catalogoWiki" value="{{ pesquisa.Meta_Metadados.Identificador.Catalogo }}">,
+                        "Entrada": <input type="text" name="entradaWiki" value="{{ pesquisa.Meta_Metadados.Identificador.Entrada }}">,
+                    },
+                    "Contribuintes": {
+                        "Entidade": <input type="text" name="entidadeWiki" value="{{ pesquisa.Meta_Metadados.Entidade }}">,
+                        "Data": <input type="text" name="dateWiki" value="{{ pesquisa.Meta_Metadados.Contribuintes.Data }}">,
+                        "Papel": <input type="text" name="papelWiki" value="{{ pesquisa.Meta_Metadados.Contribuintes.Papel }}">,
+                    },
+                    "Esquema_de_Metadados": <input type="text" name="esquemaMetadadosWiki" value="{{ pesquisa.Meta_Metadados.Esquema_de_Metadados }}">,
+                    "Idioma": <input type="text" name="linguagemWiki" value="{{ pesquisa.Meta_Metadados.Idioma }}">,
+                },
+                "Metadados_Tecnicos": {
+                    "Formato": <input type="text" name="formatoWiki" value="{{ pesquisa.Metadados_Tecnicos.Formato }}">,
+                    "Tamanho": <input type="text" name="tamanhoWiki" value="{{ pesquisa.Metadados_Tecnicos.Tamanho }}">,
+                    "Localizacao": <input type="text" name="localizacaoWiki" value="{{ pesquisa.Metadados_Tecnicos.Localizacao }}">,
+                    "Requisitos": <input type="text" name="requisitosWiki" value="{{ pesquisa.Metadados_Tecnicos.Requisitos }}">,
+                    "Observacoes_de_Instalacoes": <input type="text" name="observacoesDeInstalacoesWiki" value="{{ pesquisa.Metadados_Tecnicos.Observacoes_de_Instalacoes }}">,
+                    "Outros_Requisitos_de_Sistema": <input type="text" name="outrosRequisitosDeSistemaWiki" value="{{ pesquisa.Metadados_Tecnicos.Outros_Requisitos_de_Sistema }}">,
+                    "Duracao": <input type="text" name="duracaoWiki" value="{{ pesquisa.Metadados_Tecnicos.Duracao }}">,
+                },
+                "Aspectos_Educacionais": {
+                    "Tipo_de_Interatividade": <input type="text" name="tipoDeInteratividadeWiki" value="{{ pesquisa.Aspectos_Educacionais.Tipo_de_Interatividade }}">,
+                    "Tipo_de_recurso_de_aprendizagem": <input type="text" name="tipoDeRecursoDeAprendizagemWiki" value="{{ pesquisa.Aspectos_Educacionais.Tipo_de_recurso_de_aprendizagem }}">,
+                    "Nivel_de_Interatividade": <input type="text" name="nivelDeInteratividadeWiki" value="{{ pesquisa.Aspectos_Educacionais.Nivel_de_Interatividade }}">,
+                    "Densidade_semantica": <input type="text" name="densidadeSemanticaWiki" value="{{ pesquisa.Aspectos_Educacionais.Densidade_semantica }}">,
+                    "Usuario_final": <input type="text" name="usuarioFinalWiki" value="{{ pesquisa.Aspectos_Educacionais.Usuario_final }}">,
+                    "Contexto_de_aprendizagem": <input type="text" name="contextoDeAprendizagemWiki" value="{{ pesquisa.Aspectos_Educacionais.Contexto_de_aprendizagem }}">,
+                    "Idade_recomendada": <input type="text" name="idadeRecomendadaWiki" value="{{ pesquisa.Aspectos_Educacionais.Idade_recomendada }}">,
+                    "Grau_de_dificuldade": <input type="text" name="grauDeDificuldadeWiki" value="{{ pesquisa.Aspectos_Educacionais.Grau_de_dificuldade }}">,
+                    "Tempo_de_aprendizagem": <input type="text" name="tempoDeAprendizadoWiki" value="{{ pesquisa.Aspectos_Educacionais.Tempo_de_aprendizagem }}">,
+                    "Descricao": <input type="text" name="descricaoAspectosWiki" value="{{ pesquisa.Aspectos_Educacionais.Descricao }}">,
+                    "linguagem": <input type="text" name="linguagemWiki" value="{{ pesquisa.Aspectos_Educacionais.Linguagem }}">
+                },
+                "Direitos": {
+                    "Custo": <input type="text" name="custosWiki" value="{{ pesquisa.Direitos.Custos }}">,
+                    "Direitos_autorais": <input type="text" name="direitosAutoraisWiki" value="{{ pesquisa.Direitos.Direitos_autorais }}">,
+                    "Descricao": <input type="text" name="descricaoDireitosWiki" value="{{ pesquisa.Direitos.Descricao }}">,
+                },
+                "Relacoes": {
+                    "Genero": <input type="text" name="generoWiki" value="{{ pesquisa.Relacoes.Genero }}">,
+                    "Recurso": {
+                        "Referencias": <input type="text" name="referenciasWiki" value="{{ pesquisa.Relacoes.Recurso.Referencias }}">,
+                        "Links_externos": <input type="text" name="linkExternosWiki" value="{{ pesquisa.Relacoes.Recurso.Links_externos }}">
+                    },
+                },
+                "Classificacao": {
+                    "Finalidade": <input type="text" name="finalidadeWiki" value="{{ pesquisa.Classificacao.Finalidade }}">,
+                    "Diretorio": <input type="text" name="diretorioWiki" value="{{ pesquisa.Classificacao.Diretorio }}">,
+                    "Descricao": <input type="text" name="descricaoClassWiki" value="{{ pesquisa.Classificacao.Descricao }}">,
+                    "Palavra_Chave": <input type="text" name="palavraChaveClassWiki" value="{{ pesquisa.Classificacao.Palavra_chave }}">,
+                },
+                "Conteudo": {
+                    "Data": <input type="text" name="dateWiki" value="{{ pesquisa.Conteudo.Data }}">,
+                    "Entidade": <input type="text" name="entidadeConteudoWiki" value="{{ pesquisa.Conteudo.Entidade }}">,
+                    "Imagens": <input type="text" name="imagemWiki" value="{{ pesquisa.Conteudo.Imagens }}">,
+                    "Anotacao": <input type="text" name="anotacaoWiki" value="{{ pesquisa.Conteudo.Anotacao }}">,
+                },
+            }
+                 <button class="btn btn-success my-2 my-sm-0" type="submit">Salvar Alteração</button>
+            </form>
+        </pre>
+    </div>
+{% include 'footer.html' %}

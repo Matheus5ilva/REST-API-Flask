@@ -1,0 +1,88 @@
+{% include 'header.html' %}
+    <div class="container">
+        <h2>{{ pesquisa.Geral.Titulo }}</h2>
+        <pre>
+            {
+                "Geral": {
+                    "Id": {{ pesquisa.Geral.Id }},
+                    "Titulo": {{ pesquisa.Geral.Titulo }},
+                    "Linguagem": {{ pesquisa.Geral.Linguagem }},
+                    "Descricao": {{ pesquisa.Geral.Descricao }},
+                    "Palavras_chave": {{ pesquisa.Geral.Palavra_chave }},
+                    "Cobertura": {{ pesquisa.Geral.Cobertura }},
+                    "Estrutura": {{ pesquisa.Geral.Estrutura }},
+                    "Nivel_de_agregacao": {{ pesquisa.Geral.Nivel_de_agregacao }}
+                },
+                "Ciclo_de_vida": {
+                    "Versao": {{ pesquisa.Ciclo_de_vida.Versao }},
+                    "Status": {{ pesquisa.Ciclo_de_vida.Status }},
+                    "Contribuinte": {
+                        "Entidade": {{ pesquisa.Ciclo_de_vida.Contribuinte.Entidade }},
+                        "Data": {{ pesquisa.Ciclo_de_vida.Contribuinte.Data }},
+                        "Papel": {{ pesquisa.Ciclo_de_vida.Contribuinte.Papel }},
+                    }
+                },
+                "Meta_Metadados": {
+                    "Identificador": {
+                        "Catalogo": {{ pesquisa.Meta_Metadados.Identificador.Catalogo }},
+                        "Entrada": {{ pesquisa.Meta_Metadados.Identificador.Entrada }},
+                    },
+                    "Contribuintes": {
+                        "Entidade": {{ pesquisa.Meta_Metadados.Entidade }},
+                        "Data": {{ pesquisa.Meta_Metadados.Contribuintes.Data }},
+                        "Papel": {{ pesquisa.Meta_Metadados.Contribuintes.Papel }},
+                    },
+                    "Esquema_de_Metadados": {{ pesquisa.Meta_Metadados.Esquema_de_Metadados }},
+                    "Idioma": {{ pesquisa.Meta_Metadados.Idioma }},
+                },
+                "Metadados_Tecnicos": {
+                    "Formato": {{ pesquisa.Metadados_Tecnicos.Formato }},
+                    "Tamanho": {{ pesquisa.Metadados_Tecnicos.Tamanho }},
+                    "Localizacao": {{ pesquisa.Metadados_Tecnicos.Localizacao }},
+                    "Requisitos": {{ pesquisa.Metadados_Tecnicos.Requisitos }},
+                    "Observacoes_de_Instalacoes": {{ pesquisa.Metadados_Tecnicos.Observacoes_de_Instalacoes }},
+                    "Outros_Requisitos_de_Sistema": {{ pesquisa.Metadados_Tecnicos.Outros_Requisitos_de_Sistema }},
+                    "Duracao": {{ pesquisa.Metadados_Tecnicos.Duracao }},
+                },
+                "Aspectos_Educacionais": {
+                    "Tipo_de_Interatividade": {{ pesquisa.Aspectos_Educacionais.Tipo_de_Interatividade }},
+                    "Tipo_de_recurso_de_aprendizagem": {{ pesquisa.Aspectos_Educacionais.Tipo_de_recurso_de_aprendizagem }},
+                    "Nivel_de_Interatividade": {{ pesquisa.Aspectos_Educacionais.Nivel_de_Interatividade }},
+                    "Densidade_semantica": {{ pesquisa.Aspectos_Educacionais.Densidade_semantica }},
+                    "Usuario_final": {{ pesquisa.Aspectos_Educacionais.Usuario_final }},
+                    "Contexto_de_aprendizagem": {{ pesquisa.Aspectos_Educacionais.Contexto_de_aprendizagem }},
+                    "Idade_recomendada": {{ pesquisa.Aspectos_Educacionais.Idade_recomendada }},
+                    "Grau_de_dificuldade": {{ pesquisa.Aspectos_Educacionais.Grau_de_dificuldade }},
+                    "Tempo_de_aprendizagem": {{ pesquisa.Aspectos_Educacionais.Tempo_de_aprendizagem }},
+                    "Descricao": {{ pesquisa.Aspectos_Educacionais.Descricao }},
+                    "linguagem": {{ pesquisa.Aspectos_Educacionais.Linguagem }}
+                },
+                "Direitos": {
+                    "Custo": {{ pesquisa.Direitos.Custos }},
+                    "Direitos_autorais": {{ pesquisa.Direitos.Direitos_autorais }},
+                    "Descricao": {{ pesquisa.Direitos.Descricao }},
+                },
+                "Relacoes": {
+                    "Genero": {{ pesquisa.Relacoes.Genero }},
+                    "Recurso": {
+                        "Referencias": {{ pesquisa.Relacoes.Recurso.Referencias }},
+                        "Links_externos": {{ pesquisa.Relacoes.Recurso.Links_externos }}
+                    },
+                },
+                "Classificacao": {
+                    "Finalidade": {{ pesquisa.Classificacao.Finalidade }},
+                    "Diretorio": {{ pesquisa.Classificacao.Diretorio }},
+                    "Descricao": {{ pesquisa.Classificacao.Descricao }},
+                    "Palavra_Chave": {{ pesquisa.Classificacao.Palavra_chave }},
+                },
+                "Conteudo": {
+                    "Data": {{ pesquisa.Conteudo.Data }},
+                    "Entidade": {{ pesquisa.Conteudo.Entidade }},
+                    "Imagens": {{ pesquisa.Conteudo.Imagens }},
+                    "Anotacao": {{ pesquisa.Conteudo.Anotacao }},
+                },
+            }
+
+        </pre>
+    </div>
+{% include 'footer.html' %}
